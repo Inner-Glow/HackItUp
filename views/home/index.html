@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hack It Up</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="javascripts/global.js"></script>
     <link rel="stylesheet" href="stylesheets/tw.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/fonts.css">
 </head>
 <body>
+    <div id="cursor"></div>
     <div id="root">
         <div class="landing">
             <div class="opq"></div>
@@ -16,13 +19,16 @@
                 <img id="bg"   src="images/h3.jpeg" alt="">
             </div>
             <div class="top-h flex flex-col w-full h-fit p-2">
-                <div class="title-block w-full grid grid-cols-[60%_auto] p-3 font-[Metropolis] text-4xl font-[800]">
+                <div class="title-block w-full grid grid-cols-[60%_auto] p-3 font-[Metropolis] text-4xl font-[800])">
                     <div class="flex hmm">
-                        <div class="w-[80%] text-[#285f53]">InnerGlow</div>
+                        <div class="w-[7%] -top-[0%] h-20 -left-[0%] bg absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"><path class="kk" fill="currentColor" d="M15.5 9.63c-.19-2.79-1.32-5.51-3.44-7.63A12.25 12.25 0 0 0 8.5 9.63c1.29.68 2.47 1.56 3.5 2.63a14.2 14.2 0 0 1 3.5-2.63M12 15.45C9.85 12.17 6.18 10 2 10c0 10 9.32 11.89 10 12c.68-.12 10-2 10-12c-4.18 0-7.85 2.17-10 5.45"/></svg>
+                        </div>
+                        <div class="w-[10%] left-[7%] top-[3.5%] text-(--bg-h) font-[500] absolute opacity-70">InnerGlow</div>
                     </div>
                     <div class="flex">
                         <div class="w-[90%] text-end">
-                            <span class="w-fit pt-3 pb-3 pl-10 pr-10 bg-(--bg-h) text-center text-[60%] font-medium font-[DM_Sans] text-white rounded-[5px]">Sign In</span>
+                            <span class="w-fit pt-3 pb-3 pl-10 pr-10 bg-(--bg) text-center text-[60%] font-medium font-[DM_Sans] text-white  rounded-[5px]">Sign In</span>
                         </div> 
                     </div>
                 </div>
@@ -35,7 +41,7 @@
                        <div class="text-center">
                         A rested mind dreams bigger.
                         </div> 
-                        <div class="w-full flex justify-center text-[25%] font-[500] text-white pt-2">
+                        <div class="w-full flex justify-center text-[25%] font-[500] gg pt-2">
                             Begin your journey to better mental health and well-being today. Discover expert tips and resources to support you every step of the way.
                         </div>
                         <div class="w-full flex justify-end text-[30%] pt-10">
@@ -48,10 +54,19 @@
                 </div>
             </div>
         </div>
-        <div class="l2 flex w-full h-[400px] justify-center items-center" id="l2">
+        <div class="l2 flex w-full h-[100px] justify-center items-center" id="l2"></div>
+        <div class="l3 flex w-full h-[700px] bg-white" id="l3">
+            <div class="heading flex w-full h-[100px] bg-(--body) font-[Metropolis] text-8xl font-[600] justify-center">
+                <div class="flex space-x-10 relative translate-y-[60px]">
+                    <span class="font-[Euphoria_Script]">Our</span>
+                    <span class="font-[Euphoria_Script]">Mission</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="javascripts/bundles/homepage/homepage.bundle.js"></script>
 
+    </div>
+    <% jsFiles.forEach(function(file) { %>
+        <script src="<%= file %>"></script>
+    <% }); %>
 </body>
 </html>

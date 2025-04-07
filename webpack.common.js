@@ -1,9 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-// const webpack = require("webpack")
-// var process = require("process")
-// process.loadEnvFile(".env")
-
 module.exports = {
         entry: (function (dir){
             var files_ = {}, name1;

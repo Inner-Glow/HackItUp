@@ -3,10 +3,5 @@
       "."
     ],
     "ext": "*",
-    "delay": "1",
-    "execMap": {
-      "jsx": "npm run build",
-      "js": "npm run build",
-      "css": "npm run build-tailwind"
-    }
+    "delay": "1"
   }

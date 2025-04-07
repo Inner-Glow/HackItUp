@@ -87,4 +87,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
+  if (process.send) {
+    process.send({ event:'online', url:'http://localhost:' + addr.port + "/" });
+}
 }

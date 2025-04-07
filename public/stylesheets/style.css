@@ -1,12 +1,28 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #BAD8B6;
+  background-color: var(--body);
   user-select: none;
 }
 :root{
-  --bg-h: #0e6121; 
-  --bg: #024524;
+  --body: #BAD8B6;
+  --bg-h: #f8f8f8; 
+  --bg: #83da79;
+  --sb: #e7f7f8;
+  --curx: 0;
+  --cury: 0;
+  --c: rgb(76 240 217);
+}
+.kk {
+  fill: #b0ff8c;
+}
+.cursor{
+  position: absolute;
+  width: 20px;
+  z-index: 1;
+  height: 20px;
+  background-color: var(--c);
+  border-radius: 100%;
 }
 
 #root{
@@ -71,7 +87,7 @@ body {
 }
 
 .opq{
-  border: 1px solid var(--bg);
+  border-top: 1px solid var(--bg-h);
 
   position: absolute;
   width: 100vw;
@@ -98,17 +114,20 @@ body {
   color: var(--bg);
 }
 .lm{
-  background-color: var(--bg);
+  background-color: #83da79;
   color: white;
   border-radius: 5px;
 }
 .searhb{
-  background-color: #285f53;
+  background-color: var(--sb);
+}
+.gg{
+  color: white;
 }
 
 #search{
   font-weight: 200;
-  color: white;
+  color: black;
 }
 
 #search:focus{
@@ -120,7 +139,6 @@ body {
 .l2{
   overflow: hidden;
 }
-
 .ll2{
   display: flex;
 }
